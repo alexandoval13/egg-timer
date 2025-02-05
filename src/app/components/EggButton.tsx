@@ -18,7 +18,7 @@ export default function EggButton({ data }: EggButtonType) {
       {icon || null}
       <h1>{name}</h1>
       <button className={styles.button} onClick={handleClick}>
-        Start
+        <h4>Start</h4>
       </button>
     </div>
   );
