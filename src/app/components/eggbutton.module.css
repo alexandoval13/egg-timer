@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  flex-direction: column;
+
+  height: 35vh;
+  width: 35vw;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+
+  border: 2px solid green;
+}
+
+.button {
+  width: 72px;
+  padding: 12px;
+}
