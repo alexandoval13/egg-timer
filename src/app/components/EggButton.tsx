@@ -7,17 +7,16 @@ type EggButtonType = {
 };
 
 export default function EggButton({ data }: EggButtonType) {
-  const { name, minutes } = data;
+  const { name, minutes, icon } = data;
 
   const handleClick = () => {
-    console.log({ name, minutes });
+    console.log({ name, minutes, icon });
   };
 
   return (
     <div className={styles.main}>
+      {icon || null}
       <h1>{name}</h1>
-      <h3>{minutes} minutes</h3>
-
       <button className={styles.button} onClick={handleClick}>
         Start
       </button>
