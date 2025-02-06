@@ -14,7 +14,8 @@
   /* padding: 80px; */
   padding: 0;
   /* gap: 64px; */
-  font-family: var(--font-geist-sans);
+  /* font-family: var(--font-geist-sans); */
+  font-family: 'Kirang Haerang', serif;
 }
 
 @media (prefers-color-scheme: dark) {
