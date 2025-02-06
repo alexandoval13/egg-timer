@@ -2,6 +2,7 @@
 import styles from './eggbutton.module.css';
 import { Egg } from '@/types/Egg';
 import EggCard from './EggCard';
+import Button from '../components/Button';
 
 type EggButtonType = {
   data: Egg;
@@ -19,9 +20,7 @@ export default function EggButton({
   return (
     <div className={styles.main}>
       <EggCard data={data} />
-      <button className={styles.button} onClick={handleClick}>
-        <h4>Start Timer</h4>
-      </button>
+      <Button label={'Start Timer'} handleClick={handleClick} />
     </div>
   );
 }
