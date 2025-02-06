@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+
+  height: 35vh;
+  width: 35vw;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+
+  border: 2px solid green;
+}
+
+.icon {
+  height: 80vh;
+}
+
+.button {
+  width: 96px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #3ab0b0;
+}
+
+.button h4 {
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}

@@ -8,7 +8,7 @@ export default function Home() {
       <main className={styles.main}>
         <Eggs data={eggData} />
       </main>
-      <footer className={styles.footer}></footer>
+      {/* <footer className={styles.footer}></footer> */}
     </div>
   );
 }

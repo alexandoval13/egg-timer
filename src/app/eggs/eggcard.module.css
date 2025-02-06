@@ -11,20 +11,5 @@
   justify-content: space-around;
   text-align: center;
 
-  border: 2px solid green;
-}
-
-.icon {
-  height: 80vh;
-}
-
-.button {
-  width: 96px;
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #3ab0b0;
-}
-
-.button h4 {
-  color: white;
+  border: 2px solid pink;
 }

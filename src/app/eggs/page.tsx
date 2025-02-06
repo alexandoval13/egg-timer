@@ -1,4 +1,4 @@
-import EggButton from '../components/EggButton';
+import EggContainer from './EggContainer';
 import styles from './page.module.css';
 import { Egg } from '@/types/Egg';
 
@@ -8,11 +8,14 @@ type EggsProps = {
 
 export default function Eggs(props: EggsProps) {
   const { data } = props;
+  const title = `Get Crackin'`;
+
   return (
-    <main className={styles.main}>
-      {data.map((egg: Egg, i) => {
-        return <EggButton data={egg} key={`egg-button::${i}`} />;
-      })}
-    </main>
+    <>
+      <h1>{title}</h1>
+      <main className={styles.main}>
+        <EggContainer data={data} />
+      </main>
+    </>
   );
 }

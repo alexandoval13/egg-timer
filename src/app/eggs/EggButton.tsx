@@ -1,24 +1,26 @@
 'use client';
 import styles from './eggbutton.module.css';
 import { Egg } from '@/types/Egg';
+import EggCard from './EggCard';
 
 type EggButtonType = {
   data: Egg;
+  handleStartEggTimer: (val: Egg) => void;
 };
 
-export default function EggButton({ data }: EggButtonType) {
-  const { name, minutes, icon } = data;
-
+export default function EggButton({
+  data,
+  handleStartEggTimer,
+}: EggButtonType) {
   const handleClick = () => {
-    console.log({ name, minutes, icon });
+    handleStartEggTimer(data);
   };
 
   return (
     <div className={styles.main}>
-      {icon || null}
-      <h1>{name}</h1>
+      <EggCard data={data} />
       <button className={styles.button} onClick={handleClick}>
-        <h4>Start</h4>
+        <h4>Start Timer</h4>
       </button>
     </div>
   );

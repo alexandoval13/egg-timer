@@ -7,22 +7,22 @@ import HardEggIcon from '../../public/hard-egg-icon';
 export const eggData: Array<Egg> = [
   {
     name: 'Runny',
-    minutes: 3,
+    time: 3 * 60000,
     icon: <RunnyEggIcon />,
   },
   {
     name: 'Golden',
-    minutes: 4,
+    time: 4 * 60000,
     icon: <GoldenEggIcon />,
   },
   {
     name: 'Medium',
-    minutes: 7,
+    time: 7 * 60000,
     icon: <MediumEggIcon />,
   },
   {
     name: 'Hard',
-    minutes: 10,
+    time: 10 * 60000,
     icon: <HardEggIcon />,
   },
 ];
