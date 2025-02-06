@@ -11,5 +11,9 @@
   justify-content: space-around;
   text-align: center;
 
-  border: 2px solid pink;
+  border: 2px solid green;
+}
+
+.icon {
+  height: 80vh;
 }

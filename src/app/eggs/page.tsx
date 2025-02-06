@@ -1,9 +1,9 @@
 import EggContainer from './EggContainer';
 import styles from './page.module.css';
-import { Egg } from '@/types/Egg';
+import { EggType } from '@/types/Egg';
 
 type EggsProps = {
-  data: Array<Egg>;
+  data: Array<EggType>;
 };
 
 export default function Eggs(props: EggsProps) {
