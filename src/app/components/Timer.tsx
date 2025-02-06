@@ -53,6 +53,7 @@ export default function Timer({
         <Button
           label={pause ? 'Resume' : 'Pause'}
           handleClick={onButtonClick}
+          disabled={!timeRemaining}
         />
       )}
     </div>
