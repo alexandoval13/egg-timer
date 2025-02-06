@@ -1,12 +1,24 @@
+import Button from './Button';
+import styles from './timer.module.css';
 import { useEffect, useState } from 'react';
 
 type TimerProps = {
   milliseconds: number; // in milliseconds
   onComplete?: () => void;
+  pauseEnabled?: boolean;
 };
 
-export default function Timer({ milliseconds = 0, onComplete }: TimerProps) {
+export default function Timer({
+  milliseconds = 0,
+  onComplete,
+  pauseEnabled = true,
+}: TimerProps) {
   const [timeRemaining, setTimeRemaining] = useState<number>(milliseconds);
+  const [pause, setPause] = useState<boolean>(false);
+
+  const onButtonClick = () => {
+    setPause((prev) => !prev);
+  };
 
   useEffect(() => {
     if (timeRemaining <= 0) {
@@ -15,11 +27,13 @@ export default function Timer({ milliseconds = 0, onComplete }: TimerProps) {
     }
 
     const interval = setInterval(() => {
-      setTimeRemaining((prev) => Math.max(prev - 1000, 0));
+      if (!pause) {
+        setTimeRemaining((prev) => Math.max(prev - 1000, 0));
+      }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [timeRemaining, onComplete]);
+  }, [timeRemaining, pause, onComplete]);
 
   const formatTimeToString = (ms: number): string => {
     const totalSeconds = Math.floor(ms / 1000);
@@ -33,8 +47,14 @@ export default function Timer({ milliseconds = 0, onComplete }: TimerProps) {
   };
 
   return (
-    <div className="countdown-timer-container">
-      {formatTimeToString(timeRemaining)}
+    <div className={styles.main}>
+      <div className={styles.timer}>{formatTimeToString(timeRemaining)}</div>
+      {pauseEnabled && (
+        <Button
+          label={pause ? 'Resume' : 'Pause'}
+          handleClick={onButtonClick}
+        />
+      )}
     </div>
   );
 }
