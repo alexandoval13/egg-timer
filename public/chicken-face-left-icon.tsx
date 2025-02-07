@@ -8,15 +8,15 @@ export default function icon() {
       fill="#000000"
       transform="matrix(-1, 0, 0, 1, 0, 0)"
       stroke="#000000"
-      stroke-width="0.00512"
+      strokeWidth="0.00512"
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         stroke="#CCCCCC"
-        stroke-width="1.024"
+        strokeWidth="1.024"
       ></g>
       <g id="SVGRepo_iconCarrier">
         <path
