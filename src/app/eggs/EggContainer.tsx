@@ -5,6 +5,7 @@ import EggCard from './EggCard';
 import Button from '../components/Button';
 import { EggType } from '@/types/Egg';
 import ChickenFaceLeftIcon from '../../../public/chicken-face-left-icon';
+import LeftArrowIcon from '../../../public/left-arrow-icon';
 
 import styles from './eggcontainer.module.css';
 
@@ -37,33 +38,37 @@ export default function EggContainer({ data }: EggContainerProps) {
   return (
     <>
       {timer && egg ? (
-        <div>
-          <Button
-            label="Peck Another"
-            icon={<ChickenFaceLeftIcon />}
-            handleClick={handleReturn}
-          />
-          <div className={styles.container}>
+        <div className={styles.container}>
+          <div className={styles['back-container']} onClick={handleReturn}>
+            <LeftArrowIcon height="80px" width="80px" />
+            <div className={styles.bounce}>
+              <ChickenFaceLeftIcon />
+            </div>
+          </div>
+          <div className={styles.card}>
             <EggCard data={egg} />
             <Timer
               milliseconds={egg.time}
               onComplete={handleComplete}
               pauseEnabled
+              playAlert
             />
           </div>
         </div>
       ) : (
-        data.map((egg: EggType, i) => {
-          return (
-            <div key={`egg::${i}`} className={styles.container}>
-              <EggCard data={egg} />
-              <Button
-                label="Start Timer"
-                handleClick={() => handleStartEggTimer(egg)}
-              />
-            </div>
-          );
-        })
+        <div className={styles['cards-container']}>
+          {data.map((egg: EggType, i) => {
+            return (
+              <div key={`egg::${i}`} className={styles.card}>
+                <EggCard data={egg} />
+                <Button
+                  label="Start Timer"
+                  handleClick={() => handleStartEggTimer(egg)}
+                />
+              </div>
+            );
+          })}
+        </div>
       )}
     </>
   );

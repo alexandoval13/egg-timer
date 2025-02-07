@@ -1,6 +1,7 @@
 import EggContainer from './EggContainer';
-import styles from './page.module.css';
 import { EggType } from '@/types/Egg';
+
+import styles from './page.module.css';
 
 type EggsProps = {
   data: EggType[];
@@ -11,11 +12,13 @@ export default function Eggs(props: EggsProps) {
   const title = `Get Crackin'`;
 
   return (
-    <>
-      <h1>{title}</h1>
-      <main className={styles.main}>
+    <div className={styles.container}>
+      <div className={styles.title}>
+        <h1>{title}</h1>
+      </div>
+      <div className={styles.main}>
         <EggContainer data={data} />
-      </main>
-    </>
+      </div>
+    </div>
   );
 }

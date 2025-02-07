@@ -1,19 +1,18 @@
 .main {
   display: flex;
   flex-direction: column;
-  padding: 12px;
-  gap: 12px;
+
+  gap: 8px;
   border-radius: 8px;
 
-  height: 35vh;
-  width: 35vw;
   align-items: center;
   justify-content: space-around;
   text-align: center;
-
-  border: 2px solid green;
 }
 
-.icon {
-  height: 80vh;
+@media (max-width: 600px) {
+  .icon {
+    height: 64px;
+    width: 64px;
+  }
 }
