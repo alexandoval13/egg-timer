@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 type TimerProps = {
   milliseconds: number; // in milliseconds
   onComplete?: () => void;
+  playAlert?: boolean;
   pauseEnabled?: boolean;
 };
 
@@ -12,16 +13,22 @@ export default function Timer({
   milliseconds = 0,
   onComplete,
   pauseEnabled = true,
+  playAlert = false,
 }: TimerProps) {
-  const [timeRemaining, setTimeRemaining] = useState<number>(milliseconds);
+  const [timeRemaining, setTimeRemaining] = useState<number>(3000);
   const [pause, setPause] = useState<boolean>(false);
 
   const onButtonClick = () => {
     setPause((prev) => !prev);
   };
 
+  const alert = new Audio('/audio-timer-alert.mp3');
+
   useEffect(() => {
     if (timeRemaining <= 0) {
+      if (playAlert) {
+        alert.play();
+      }
       onComplete?.();
       return;
     }
@@ -33,7 +40,7 @@ export default function Timer({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [timeRemaining, pause, onComplete]);
+  }, [timeRemaining, pause, playAlert, alert, onComplete]);
 
   const formatTimeToString = (ms: number): string => {
     const totalSeconds = Math.floor(ms / 1000);
