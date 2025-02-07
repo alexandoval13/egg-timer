@@ -1,3 +1,4 @@
+import { formatTimeToString } from '@/lib/formatTimeToString';
 import Button from './Button';
 import styles from './timer.module.css';
 import { useEffect, useState } from 'react';
@@ -40,17 +41,6 @@ export default function Timer({
 
     return () => clearInterval(interval);
   }, [timeRemaining, pause, playAlert, onComplete]);
-
-  const formatTimeToString = (ms: number): string => {
-    const totalSeconds = Math.floor(ms / 1000);
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-
-    // Add leading zero to seconds if needed
-    const secondsString = seconds < 10 ? '0' + seconds : seconds;
-
-    return `${minutes}:${secondsString}`;
-  };
 
   return (
     <div className={styles.main}>
