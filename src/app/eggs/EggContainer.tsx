@@ -4,6 +4,7 @@ import Timer from '../components/Timer';
 import EggCard from './EggCard';
 import Button from '../components/Button';
 import { EggType } from '@/types/Egg';
+import ChickenFaceLeftIcon from '../../../public/chicken-face-left-icon';
 
 import styles from './eggcontainer.module.css';
 
@@ -21,15 +22,35 @@ export default function EggContainer({ data }: EggContainerProps) {
   };
 
   const handleComplete = () => {
-    alert(`Egg's ready!`);
+    console.log(`Egg's ready!`);
+  };
+
+  const clearTimer = () => {
+    setEgg(null); // Reset after completion
+    setTimer(false);
+  };
+
+  const handleReturn = () => {
+    clearTimer();
   };
 
   return (
     <>
       {timer && egg ? (
-        <div className={styles.container}>
-          <EggCard data={egg} />
-          <Timer milliseconds={egg.time} onComplete={handleComplete} />
+        <div>
+          <Button
+            label="Peck Another"
+            icon={<ChickenFaceLeftIcon />}
+            handleClick={handleReturn}
+          />
+          <div className={styles.container}>
+            <EggCard data={egg} />
+            <Timer
+              milliseconds={egg.time}
+              onComplete={handleComplete}
+              pauseEnabled
+            />
+          </div>
         </div>
       ) : (
         data.map((egg: EggType, i) => {

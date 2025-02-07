@@ -1,15 +1,27 @@
 .button {
-  width: 96px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  max-width: 112px;
   padding: 8px;
   border-radius: 8px;
   background-color: #3ab0b0;
 }
 
 .button h4 {
-  color: white;
+  text-align: center;
+  color: black;
 }
 
 .button:hover {
   cursor: pointer;
   opacity: 80%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
 }

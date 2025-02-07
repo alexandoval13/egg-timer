@@ -1,9 +1,9 @@
 'use client';
-import { Egg } from '@/types/Egg';
+import { EggType } from '@/types/Egg';
 import styles from './eggcard.module.css';
 
 type EggCardType = {
-  data: Egg;
+  data: EggType;
 };
 
 export default function EggCard({ data }: EggCardType) {
