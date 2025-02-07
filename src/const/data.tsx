@@ -1,10 +1,10 @@
-import { Egg } from '@/types/Egg';
+import { EggType } from '@/types/Egg';
 import RunnyEggIcon from '../../public/runny-egg-icon';
 import GoldenEggIcon from '../../public/golden-egg-icon';
 import MediumEggIcon from '../../public/medium-egg-icon';
 import HardEggIcon from '../../public/hard-egg-icon';
 
-export const eggData: Array<Egg> = [
+export const eggData: EggType[] = [
   {
     name: 'Runny',
     time: 3 * 60000,

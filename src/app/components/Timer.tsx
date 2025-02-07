@@ -15,16 +15,15 @@ export default function Timer({
   pauseEnabled = true,
   playAlert = false,
 }: TimerProps) {
-  const [timeRemaining, setTimeRemaining] = useState<number>(3000);
+  const [timeRemaining, setTimeRemaining] = useState<number>(milliseconds);
   const [pause, setPause] = useState<boolean>(false);
 
   const onButtonClick = () => {
     setPause((prev) => !prev);
   };
 
-  const alert = new Audio('/audio-timer-alert.mp3');
-
   useEffect(() => {
+    const alert = new Audio('/audio-timer-alert.mp3');
     if (timeRemaining <= 0) {
       if (playAlert) {
         alert.play();
@@ -40,7 +39,7 @@ export default function Timer({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [timeRemaining, pause, playAlert, alert, onComplete]);
+  }, [timeRemaining, pause, playAlert, onComplete]);
 
   const formatTimeToString = (ms: number): string => {
     const totalSeconds = Math.floor(ms / 1000);

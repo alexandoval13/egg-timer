@@ -9,7 +9,7 @@ import ChickenFaceLeftIcon from '../../../public/chicken-face-left-icon';
 import styles from './eggcontainer.module.css';
 
 type EggContainerProps = {
-  data: Array<EggType>;
+  data: EggType[];
 };
 
 export default function EggContainer({ data }: EggContainerProps) {

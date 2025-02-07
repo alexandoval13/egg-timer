@@ -3,7 +3,7 @@ import styles from './page.module.css';
 import { EggType } from '@/types/Egg';
 
 type EggsProps = {
-  data: Array<EggType>;
+  data: EggType[];
 };
 
 export default function Eggs(props: EggsProps) {
