@@ -44,14 +44,17 @@ export default function Timer({
 
   return (
     <div className={styles.main}>
-      <div className={styles.timer}>{formatTimeToString(timeRemaining)}</div>
-      {pauseEnabled && (
+      <div className={`${styles.timer} ${timeRemaining ? '' : styles.wiggle}`}>
+        {formatTimeToString(timeRemaining)}
+      </div>
+      {(pauseEnabled && timeRemaining && (
         <Button
           label={pause ? 'Resume' : 'Pause'}
           handleClick={onButtonClick}
           disabled={!timeRemaining}
         />
-      )}
+      )) ||
+        null}
     </div>
   );
 }

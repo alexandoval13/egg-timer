@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Kirang_Haerang } from 'next/font/google';
+import { Geist, Hi_Melody, Kirang_Haerang } from 'next/font/google';
 import './globals.css';
 
 // TODO: Fonts
@@ -10,6 +10,11 @@ const kirang = Kirang_Haerang({
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const hiMelody = Hi_Melody({
+  weight: '400',
   subsets: ['latin'],
 });
 
@@ -25,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${kirang} ${geistSans.variable}`}>{children}</body>
+      <body className={`${kirang} ${geistSans.variable} ${hiMelody}`}>
+        {children}
+      </body>
     </html>
   );
 }

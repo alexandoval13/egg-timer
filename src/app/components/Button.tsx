@@ -14,7 +14,7 @@ function Button(props: ButtonProps) {
   return (
     <button className={styles.button} onClick={handleClick} disabled={disabled}>
       {icon && <div>{icon}</div>}
-      <h4>{label}</h4>
+      <h6>{label}</h6>
     </button>
   );
 }

@@ -5,13 +5,18 @@
   justify-content: center;
   min-width: 96px;
   max-width: 112px;
-  padding: 8px;
+  padding: 4px;
   border-radius: 8px;
-  background-color: #3ab0b0;
+  border-color: #408989;
+  background-color: #6ee5e5;
+  font-family: 'Hi Melody', serif;
+  font-size: 24px;
 }
 
-.button h4 {
+.button h6 {
   text-align: center;
+  line-height: 16px;
+  font-size: 16px;
   color: black;
 }
 
