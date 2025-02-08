@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 type TimerProps = {
   milliseconds: number; // in milliseconds
   onComplete?: () => void;
-  playAlert?: boolean;
   pauseEnabled?: boolean;
 };
 
@@ -14,7 +13,6 @@ export default function Timer({
   milliseconds = 0,
   onComplete,
   pauseEnabled = true,
-  playAlert = false,
 }: TimerProps) {
   const [timeRemaining, setTimeRemaining] = useState<number>(milliseconds);
   const [pause, setPause] = useState<boolean>(false);
@@ -24,11 +22,7 @@ export default function Timer({
   };
 
   useEffect(() => {
-    const alert = new Audio('/audio-timer-alert.mp3');
     if (timeRemaining <= 0) {
-      if (playAlert) {
-        alert.play();
-      }
       onComplete?.();
       return;
     }
@@ -40,7 +34,7 @@ export default function Timer({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [timeRemaining, pause, playAlert, onComplete]);
+  }, [timeRemaining, pause, onComplete]);
 
   return (
     <div className={styles.main}>

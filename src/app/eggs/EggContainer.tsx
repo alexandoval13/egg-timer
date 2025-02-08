@@ -17,13 +17,15 @@ export default function EggContainer({ data }: EggContainerProps) {
   const [timer, setTimer] = useState<boolean>(false);
   const [egg, setEgg] = useState<EggType | null>(null);
 
+  const alert = new Audio('/audio-timer-alert.mp3');
+
   const handleStartEggTimer = (selectedEgg: EggType) => {
     setTimer(true);
     setEgg(selectedEgg);
   };
 
   const handleComplete = () => {
-    console.log(`Egg's ready!`);
+    alert.play();
   };
 
   const clearTimer = () => {
@@ -32,6 +34,7 @@ export default function EggContainer({ data }: EggContainerProps) {
   };
 
   const handleReturn = () => {
+    alert.pause();
     clearTimer();
   };
 
