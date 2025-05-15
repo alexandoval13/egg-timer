@@ -35,7 +35,7 @@ export default function EggTimer(props: EggTimerProps) {
         </div>
       </div>
       <div className={styles.card}>
-        <EggCard data={egg} />
+        <EggCard egg={egg} />
         <Timer
           milliseconds={egg.time}
           onComplete={handleComplete}

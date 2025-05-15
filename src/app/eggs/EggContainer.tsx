@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import EggCard from './EggCard';
-import Button from '../components/Button';
 import { EggType } from '@/types/Egg';
 
 import styles from './eggcontainer.module.css';
@@ -35,10 +34,10 @@ export default function EggContainer({ data }: EggContainerProps) {
           {data.map((egg: EggType, i) => {
             return (
               <div key={`egg::${i}`} className={styles.card}>
-                <EggCard data={egg} />
-                <Button
-                  label="Start Timer"
-                  handleClick={() => handleStartEggTimer(egg)}
+                <EggCard
+                  egg={egg}
+                  button
+                  handleClick={(val) => handleStartEggTimer(val)}
                 />
               </div>
             );

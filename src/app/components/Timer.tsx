@@ -44,7 +44,7 @@ export default function Timer({
       {(pauseEnabled && timeRemaining && (
         <Button
           label={pause ? 'Resume' : 'Pause'}
-          handleClick={onButtonClick}
+          onClick={onButtonClick}
           disabled={!timeRemaining}
         />
       )) ||
