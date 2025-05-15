@@ -13,8 +13,8 @@ export default function Eggs(props: EggsProps) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
-        <h1>{title}</h1>
+      <div className={styles.header}>
+        <h1 className={styles.title}>{title}</h1>
       </div>
       <div className={styles.main}>
         <EggContainer data={data} />

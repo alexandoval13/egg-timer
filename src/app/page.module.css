@@ -8,11 +8,13 @@
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
-  /* align-items: center; */
+
   justify-items: center;
   min-height: 100svh;
   padding: 32px;
   font-family: 'Kirang Haerang', serif;
+
+  background-image: url('/egg-small-pattern.svg');
 }
 
 @media (prefers-color-scheme: dark) {
