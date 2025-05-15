@@ -36,11 +36,13 @@
 .cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  overflow: scroll;
   gap: 12px;
+  padding: 0;
   text-align: center;
   align-items: center;
   justify-items: center;
+
+  /* overflow-x: scroll; */
 }
 
 .card {

@@ -3,14 +3,14 @@ import { useState } from 'react';
 import EggCard from './EggCard';
 import { EggType } from '@/types/Egg';
 
-import styles from './eggcontainer.module.css';
+import styles from './eggscontainer.module.css';
 import EggTimer from './EggTimer';
 
-type EggContainerProps = {
+type EggsContainerProps = {
   data: EggType[];
 };
 
-export default function EggContainer({ data }: EggContainerProps) {
+export default function EggsContainer({ data }: EggsContainerProps) {
   const [egg, setEgg] = useState<EggType | null>(null);
 
   const handleStartEggTimer = (selectedEgg: EggType) => {
