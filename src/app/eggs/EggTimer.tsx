@@ -6,7 +6,7 @@ import { EggType } from '@/types/Egg';
 import ChickenFaceLeftIcon from '../../../public/chicken-face-left-icon';
 import LeftArrowIcon from '../../../public/left-arrow-icon';
 
-import styles from './eggcontainer.module.css';
+import styles from './eggscontainer.module.css';
 
 type EggTimerProps = {
   handleClear: () => void;
