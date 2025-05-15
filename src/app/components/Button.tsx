@@ -5,14 +5,14 @@ type ButtonProps = {
   label: string;
   icon?: JSX.Element;
   disabled?: boolean;
-  handleClick: () => void;
+  onClick: () => void;
 };
 
 function Button(props: ButtonProps) {
-  const { label, icon, disabled = false, handleClick } = props;
+  const { label, icon, disabled = false, onClick } = props;
 
   return (
-    <button className={styles.button} onClick={handleClick} disabled={disabled}>
+    <button className={styles.button} onClick={onClick} disabled={disabled}>
       {icon && <div>{icon}</div>}
       <h6>{label}</h6>
     </button>

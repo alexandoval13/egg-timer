@@ -1,4 +1,4 @@
-import EggContainer from './EggContainer';
+import EggContainer from './EggsContainer';
 import { EggType } from '@/types/Egg';
 
 import styles from './page.module.css';
