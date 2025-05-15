@@ -10,9 +10,16 @@
   text-align: center;
 }
 
+.icon {
+  padding: 24px;
+  height: 200x;
+  width: 200px;
+}
+
 @media (max-width: 600px) {
   .icon {
-    height: 64px;
-    width: 64px;
+    padding: 8px;
+    height: 96px;
+    width: 96px;
   }
 }

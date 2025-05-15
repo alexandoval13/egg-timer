@@ -6,25 +6,20 @@
 @media (max-width: 600px) {
   .container {
     width: 100%;
-    gap: 12px;
+    gap: 24px;
   }
-}
-
-.title {
 }
 
 .main {
   display: grid;
   gap: 24px;
-  /*
-  display: flex;
-  /* justify-content: space-evenly;
-  align-content: space-evenly; */
+}
 
-  /* flex-wrap: wrap;
-  gap: 32px; */
+.header {
+  width: 100%;
+}
 
-  /* border: 2px solid #32a1ce;
-  height: 80vh;
-  width: 80vw; */
+.title {
+  font-size: 48px;
+  text-align: center;
 }

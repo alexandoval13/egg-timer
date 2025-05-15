@@ -1,8 +1,8 @@
 export default function icon() {
   return (
     <svg
-      height="200px"
-      width="200px"
+      height="100%"
+      width="100%"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"

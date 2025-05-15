@@ -18,10 +18,12 @@ export default function EggCard({
 
   return (
     <div className={styles.main}>
-      {icon || null}
-      <h1>{name}</h1>
-      {button && handleClick && (
-        <Button label="Start Timer" onClick={() => handleClick(egg)} />
+      {icon && <div className={styles.icon}>{icon}</div>}
+
+      {button && handleClick ? (
+        <Button label={name} onClick={() => handleClick(egg)} />
+      ) : (
+        <h1>{name}</h1>
       )}
     </div>
   );
