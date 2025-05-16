@@ -20,8 +20,13 @@ const waitForNextJs = (port = 3000, host = 'localhost') => {
 
 const createWindow = async () => {
   mainWindow = new BrowserWindow({
-    width: 720,
-    height: 720,
+    show: false,
+    width: 580,
+    height: 640,
+    maxWidth: 580,
+    maxHeight: 640,
+    minWidth: 420,
+    minHeight: 480,
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js'),
