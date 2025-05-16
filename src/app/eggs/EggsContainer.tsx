@@ -33,7 +33,7 @@ export default function EggsContainer({ data }: EggsContainerProps) {
         <div className={styles['cards-container']}>
           {data.map((egg: EggType, i) => {
             return (
-              <div key={`egg::${i}`} className={styles.card}>
+              <div key={`egg::${i}`}>
                 <EggCard
                   egg={egg}
                   button

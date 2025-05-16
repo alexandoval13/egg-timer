@@ -6,7 +6,7 @@ import { EggType } from '@/types/Egg';
 import ChickenFaceLeftIcon from '../../../public/chicken-face-left-icon';
 import LeftArrowIcon from '../../../public/left-arrow-icon';
 
-import styles from './eggscontainer.module.css';
+import styles from './eggtimer.module.css';
 
 type EggTimerProps = {
   handleClear: () => void;
@@ -34,7 +34,7 @@ export default function EggTimer(props: EggTimerProps) {
           <ChickenFaceLeftIcon />
         </div>
       </div>
-      <div className={styles.card}>
+      <div>
         <EggCard egg={egg} />
         <Timer
           milliseconds={egg.time}
