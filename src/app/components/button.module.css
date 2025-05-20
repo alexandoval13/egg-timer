@@ -8,7 +8,7 @@
   border-radius: 6px;
   border-color: #408989;
   background-color: #ffffff;
-  box-shadow: 12px 12px 12px;
+  box-shadow: 12px 12px 12px #000000;
 }
 
 .btn-text {

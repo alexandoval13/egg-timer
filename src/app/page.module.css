@@ -13,6 +13,8 @@
   min-height: 100svh;
   padding: 32px;
   font-family: 'Kirang Haerang', serif;
+  color: black;
+  background-color: #f2f2f2;
   background-image: url('/egg-small-pattern.svg');
   background-position-x: 50%;
 }
