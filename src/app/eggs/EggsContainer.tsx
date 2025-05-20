@@ -5,12 +5,10 @@ import { EggType } from '@/types/Egg';
 
 import styles from './eggscontainer.module.css';
 import EggTimer from './EggTimer';
+import { eggData } from '@/const/data';
 
-type EggsContainerProps = {
-  data: EggType[];
-};
-
-export default function EggsContainer({ data }: EggsContainerProps) {
+export default function EggsContainer() {
+  const data = eggData;
   const [egg, setEgg] = useState<EggType | null>(null);
 
   const handleStartEggTimer = (selectedEgg: EggType) => {
