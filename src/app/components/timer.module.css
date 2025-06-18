@@ -1,14 +1,21 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+
   font-size: 200px;
   text-align: center;
   align-items: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .timer {
   font-size: 200px;
   text-align: center;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
 }
 
 .button {

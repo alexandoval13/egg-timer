@@ -5,14 +5,16 @@ import { useEffect, useState } from 'react';
 
 type TimerProps = {
   milliseconds: number; // in milliseconds
-  onComplete?: () => void;
   pauseEnabled?: boolean;
+  onComplete?: () => void;
+  handleEnd?: () => void;
 };
 
 export default function Timer({
   milliseconds = 0,
-  onComplete,
   pauseEnabled = true,
+  onComplete,
+  handleEnd,
 }: TimerProps) {
   const [timeRemaining, setTimeRemaining] = useState<number>(milliseconds);
   const [pause, setPause] = useState<boolean>(false);
@@ -41,14 +43,23 @@ export default function Timer({
       <div className={`${styles.timer} ${timeRemaining ? '' : styles.wiggle}`}>
         {formatTimeToString(timeRemaining)}
       </div>
-      {(pauseEnabled && timeRemaining && (
-        <Button
-          label={pause ? 'Resume' : 'Pause'}
-          onClick={onButtonClick}
-          disabled={!timeRemaining}
-        />
-      )) ||
-        null}
+      <div className={styles.actions}>
+        {(pauseEnabled && timeRemaining && (
+          <Button
+            label={pause ? 'Resume' : 'Pause'}
+            onClick={onButtonClick}
+            disabled={!timeRemaining}
+          />
+        )) ||
+          null}
+        {handleEnd ? (
+          <Button
+            label={'End Timer'}
+            onClick={handleEnd}
+            disabled={!timeRemaining}
+          />
+        ) : null}
+      </div>
     </div>
   );
 }

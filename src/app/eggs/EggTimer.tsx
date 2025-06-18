@@ -3,8 +3,6 @@
 import Timer from '../components/Timer';
 import EggCard from './EggCard';
 import { EggType } from '@/types/Egg';
-import ChickenFaceLeftIcon from '../../../public/chicken-face-left-icon';
-import LeftArrowIcon from '../../../public/left-arrow-icon';
 
 import styles from './eggtimer.module.css';
 
@@ -28,18 +26,13 @@ export default function EggTimer(props: EggTimerProps) {
 
   return (
     <div className={styles.container}>
-      <div className={styles['back-container']} onClick={handleReturn}>
-        <LeftArrowIcon height="80px" width="80px" />
-        <div className={styles.bounce}>
-          <ChickenFaceLeftIcon />
-        </div>
-      </div>
       <div>
         <EggCard egg={egg} />
         <Timer
           milliseconds={egg.time}
           onComplete={handleComplete}
           pauseEnabled
+          handleEnd={handleReturn}
         />
       </div>
     </div>

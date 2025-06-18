@@ -1,0 +1,11 @@
+version: 0.1.0
+files:
+  - url: egg-timer-0.1.0-mac.zip
+    sha512: i3p8EljhHbCpibRac4zFwyvn6bd8pb6nU1V4WZoXexGQJy7FpubMwHX7BlAcQbgInXk645Pn4vZZ7dyJ6+t1Pw==
+    size: 246011694
+  - url: egg-timer-0.1.0.dmg
+    sha512: s5lGFQX3OUrblL1pMa0sICKiDGsqscpOUhsTX/z8HvObWa5jQvIKoOgvnXASc4NhaVXhyfmQPqKRn8ltcYVTfg==
+    size: 253060974
+path: egg-timer-0.1.0-mac.zip
+sha512: i3p8EljhHbCpibRac4zFwyvn6bd8pb6nU1V4WZoXexGQJy7FpubMwHX7BlAcQbgInXk645Pn4vZZ7dyJ6+t1Pw==
+releaseDate: '2025-06-18T17:55:20.644Z'

@@ -1,0 +1,4 @@
+owner: alexandoval13
+repo: egg-timer
+provider: github
+updaterCacheDirName: egg-timer-updater

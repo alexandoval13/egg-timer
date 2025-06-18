@@ -1,13 +1,12 @@
 'use client';
 import { EggType } from '@/types/Egg';
-import styles from './eggcard.module.css';
 import { formatTimeToString } from '@/lib/formatTimeToString';
-// import Button from '../components/Button';
+import styles from './eggcard.module.css';
 
 type EggCardPropsType = {
   egg: EggType;
   button?: boolean;
-  handleClick: (egg: EggType) => void;
+  handleClick?: (egg: EggType) => void;
 };
 
 export default function EggCard({
@@ -20,7 +19,7 @@ export default function EggCard({
   return (
     <div
       className={button ? styles.mainBtn : styles.main}
-      onClick={() => handleClick(egg)}
+      onClick={handleClick ? () => handleClick(egg) : undefined}
     >
       <div className={styles.icon}>{icon}</div>
 

@@ -25,23 +25,25 @@ export default function EggsContainer() {
 
   return (
     <>
-      {egg ? (
-        <EggTimer handleClear={handleClear} egg={egg} />
-      ) : (
-        <div className={styles['cards-container']}>
-          {data.map((egg: EggType, i) => {
-            return (
-              <div key={`egg::${i}`}>
-                <EggCard
-                  egg={egg}
-                  button
-                  handleClick={(val) => handleStartEggTimer(val)}
-                />
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <div className={styles.container}>
+        {egg ? (
+          <EggTimer handleClear={handleClear} egg={egg} />
+        ) : (
+          <div className={styles.main}>
+            {data.map((egg: EggType, i) => {
+              return (
+                <div key={`egg::${i}`}>
+                  <EggCard
+                    egg={egg}
+                    button
+                    handleClick={(val) => handleStartEggTimer(val)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </>
   );
 }

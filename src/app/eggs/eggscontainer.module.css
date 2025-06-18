@@ -1,4 +1,9 @@
-.cards-container {
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
