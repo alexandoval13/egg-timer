@@ -6,13 +6,12 @@
   max-width: 112px;
   padding: 2px;
   border-radius: 6px;
-  border-color: #408989;
+  border: 2px solid rgba(253, 190, 190, 0.722);
   background-color: #ffffff;
-  box-shadow: 12px 12px 12px #000000;
+  box-shadow: 2px 2px 2px #828282;
 }
 
 .btn-text {
-  /* font-family: 'Hi Melody', serif; */
   font-family: 'Kirang Haerang', serif;
   text-align: center;
   font-size: 28px;
@@ -29,21 +28,3 @@
   justify-content: center;
   justify-items: center;
 }
-
-/* Enable hover only on non-touch devices */
-/* @media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-} */
