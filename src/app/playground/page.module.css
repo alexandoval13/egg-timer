@@ -1,0 +1,26 @@
+.page {
+  display: grid;
+
+  padding: 32px;
+  gap: 12px;
+
+  font-family: 'Kirang Haerang', serif;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer {
+  text-align: center;
+}
+
+.heading {
+  font-size: 48px;
+}
+
+.divider {
+  border: 1px solid black;
+}
