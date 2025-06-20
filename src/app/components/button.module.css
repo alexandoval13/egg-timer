@@ -1,10 +1,9 @@
 .button {
   display: flex;
+  padding: 2px 12px;
+  min-width: 112px;
   align-items: center;
   justify-content: center;
-  min-width: 112px;
-  max-width: 112px;
-  padding: 2px;
   border-radius: 6px;
   border: 2px solid rgba(253, 190, 190, 0.722);
   background-color: #ffffff;

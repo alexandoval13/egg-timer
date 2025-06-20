@@ -1,16 +1,22 @@
 .page {
-  display: grid;
-
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   padding: 32px;
   gap: 12px;
 
   font-family: 'Kirang Haerang', serif;
   color: black;
+
+  border: 2px solid pink;
 }
 
 .main {
   display: flex;
   flex-direction: column;
+  padding: 24px 0;
+
+  border: 2px solid blue;
 }
 
 .textContainer {

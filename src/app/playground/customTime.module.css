@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 2px;
+  column-gap: 6px;
+  max-width: fit-content;
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 64px;
+  overflow: visible;
+
+  border: 2px solid red;
+}
+
+.spacer {
+  height: 24px;
+}

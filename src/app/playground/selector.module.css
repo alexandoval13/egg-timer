@@ -1,0 +1,64 @@
+.container {
+  position: relative;
+  display: inline-block;
+  /* font-family: system-ui, sans-serif; */
+  touch-action: manipulation; /* speeds up taps */
+}
+
+.dropdownWrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Dropdown that supports both mouse wheel and touch drag */
+.dropdown {
+  position: relative;
+  max-height: 240px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+
+  scroll-behavior: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
+  touch-action: pan-y; /* Explicitly allow vertical drag */
+}
+
+.dropdown::-webkit-scrollbar {
+  width: 16px;
+  background: pink;
+}
+.dropdown::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+.dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Options (now mobile-tap friendly) */
+.option {
+  padding: 14px 16px; /* increased padding for touch targets */
+  text-align: center;
+  cursor: pointer;
+  /* transition: background 0.2s none; */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.option:hover {
+  background-color: #fff5f5;
+}
+.selected {
+  background-color: #ffcaca;
+  font-weight: bold;
+}
+.selected::before {
+  color: #ffdbdb;
+  font-weight: normal;
+}
