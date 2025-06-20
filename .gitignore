@@ -1,5 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Ignore build artifacts
+dist/
+out/
+*.dmg
+*.zip
+*.asar
+*.node
+
+# Ignore system files
+.DS_Store
+
+# Ignore npm artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
 # dependencies
 /node_modules
 /.pnp
