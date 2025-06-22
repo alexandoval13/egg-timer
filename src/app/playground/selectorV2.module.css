@@ -1,0 +1,51 @@
+.wrapper {
+  width: 64px;
+}
+
+.input {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+
+  text-align: center;
+}
+
+.input:hover {
+  cursor: pointer;
+  opacity: 10%;
+}
+
+.listWrapper {
+  position: absolute;
+  width: inherit;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+
+  z-index: 1000;
+}
+
+.list {
+  max-height: 164px;
+  width: inherit;
+
+  text-align: center;
+
+  overflow-y: scroll;
+  scrollbar-color: pink white;
+
+  scroll-behavior: auto;
+
+  background-color: white;
+}
+
+.listItem {
+  padding: 2px;
+}
+
+.selectedItem {
+  background-color: pink;
+}
+
+.listItem:hover {
+  background-color: pink;
+}
