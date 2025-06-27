@@ -25,10 +25,7 @@ const CustomTimeInput = ({ handleSubmit }: CustomTimeInputProps) => {
 
   return (
     <div className={styles.container}>
-      <div
-        // className={styles.grid}
-        className={styles.inputRow}
-      >
+      <div className={styles.inputRow}>
         <div className={styles.cell}>
           <p>Hours</p>
           <div className={styles.centered}>
@@ -61,9 +58,10 @@ const CustomTimeInput = ({ handleSubmit }: CustomTimeInputProps) => {
         </div>
       </div>
       <Button
-        label={!hours && !minutes && !seconds ? 'Custom Timer' : 'Start Timer'}
+        label={!hours && !minutes && !seconds ? 'Custom Timer' : 'Start'}
         onClick={handleClick}
         disabled={!hours && !minutes && !seconds}
+        type="small"
       />
     </div>
   );

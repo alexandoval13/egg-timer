@@ -4,7 +4,7 @@ type ButtonProps = {
   label: string;
   disabled?: boolean;
   onClick: () => void;
-  type?: 'small' | 'large';
+  type?: 'small';
 };
 
 function Button(props: ButtonProps) {
@@ -13,11 +13,16 @@ function Button(props: ButtonProps) {
   // const buttonStyles = switch
   let buttonStyles = styles.button;
   if (type === 'small') buttonStyles = styles.buttonSm;
-  if (type === 'large') buttonStyles = styles.buttonLg;
+
+  console.log({ disabled });
 
   return (
-    <button className={buttonStyles} onClick={onClick} disabled={disabled}>
-      <p className={styles['btn-text']}>{label}</p>
+    <button
+      className={`${buttonStyles} ${disabled ? styles.disabled : ''}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      <p>{label}</p>
     </button>
   );
 }
