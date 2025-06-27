@@ -4,14 +4,20 @@ type ButtonProps = {
   label: string;
   disabled?: boolean;
   onClick: () => void;
+  type?: 'small' | 'large';
 };
 
 function Button(props: ButtonProps) {
-  const { label, disabled = false, onClick } = props;
+  const { label, disabled = false, type = '', onClick } = props;
+
+  // const buttonStyles = switch
+  let buttonStyles = styles.button;
+  if (type === 'small') buttonStyles = styles.buttonSm;
+  if (type === 'large') buttonStyles = styles.buttonLg;
 
   return (
-    <button className={styles.button} onClick={onClick} disabled={disabled}>
-      <h4 className={styles['btn-text']}>{label}</h4>
+    <button className={buttonStyles} onClick={onClick} disabled={disabled}>
+      <p className={styles['btn-text']}>{label}</p>
     </button>
   );
 }

@@ -54,9 +54,8 @@ export default function Timer({
           null}
         {handleEnd ? (
           <Button
-            label={'End Timer'}
+            label={timeRemaining ? 'End Timer' : 'Close'}
             onClick={handleEnd}
-            disabled={!timeRemaining}
           />
         ) : null}
       </div>
