@@ -1,6 +1,9 @@
 import Layout from '../layout';
-import styles from './page.module.css';
 
+import styles from './page.module.css';
+import DebouncedInputSearch from './DebouncedInputSearch';
+
+// test area
 export default function Playground() {
   return (
     <Layout>
@@ -9,6 +12,7 @@ export default function Playground() {
           <p className={styles.heading}>Playground</p>
         </div>
         <div className={styles.divider} />
+        <DebouncedInputSearch />
       </div>
     </Layout>
   );
