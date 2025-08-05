@@ -1,10 +1,14 @@
 'use client';
-import { useState } from 'react';
-import EggCard from './EggCard';
-import { EggType } from '@/types/Egg';
-
 import styles from './eggscontainer.module.css';
+
+import { useState } from 'react';
+
+import CustomTimeInput from './CustomTimeInput';
+import EggCard from './EggCard';
 import EggTimer from './EggTimer';
+import HardEggIcon from '../../../public/hard-egg-icon';
+
+import { EggType } from '@/types/Egg';
 import { eggData } from '@/const/data';
 
 export default function EggsContainer() {
@@ -23,27 +27,30 @@ export default function EggsContainer() {
     clearTimer();
   };
 
+  const handleSubmitCustomTime = (ms: number) => {
+    setEgg({ name: 'Custom', time: ms, icon: <HardEggIcon /> });
+  };
+
   return (
-    <>
-      <div className={styles.container}>
-        {egg ? (
-          <EggTimer handleClear={handleClear} egg={egg} />
-        ) : (
-          <div className={styles.main}>
-            {data.map((egg: EggType, i) => {
-              return (
-                <div key={`egg::${i}`}>
-                  <EggCard
-                    egg={egg}
-                    button
-                    handleClick={(val) => handleStartEggTimer(val)}
-                  />
-                </div>
-              );
-            })}
+    <div className={styles.container}>
+      {egg ? (
+        <EggTimer handleClear={handleClear} egg={egg} />
+      ) : (
+        <div className={styles.main}>
+          <CustomTimeInput handleSubmit={handleSubmitCustomTime} />
+          <div className={styles.eggGrid}>
+            {data.map((egg: EggType, i) => (
+              <div key={`egg::${i}`}>
+                <EggCard
+                  egg={egg}
+                  button
+                  handleClick={(val) => handleStartEggTimer(val)}
+                />
+              </div>
+            ))}
           </div>
-        )}
-      </div>
-    </>
+        </div>
+      )}
+    </div>
   );
 }

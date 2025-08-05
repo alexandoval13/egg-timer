@@ -1,7 +1,8 @@
 'use client';
+import styles from './eggcard.module.css';
+
 import { EggType } from '@/types/Egg';
 import { formatTimeToString } from '@/lib/formatTimeToString';
-import styles from './eggcard.module.css';
 
 type EggCardPropsType = {
   egg: EggType;
