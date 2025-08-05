@@ -1,6 +1,4 @@
 import Layout from '../layout';
-import CustomTimeInput from '../eggs/CustomTimeInput';
-
 import styles from './page.module.css';
 
 export default function Playground() {
@@ -11,10 +9,6 @@ export default function Playground() {
           <p className={styles.heading}>Playground</p>
         </div>
         <div className={styles.divider} />
-
-        <div className={styles.main}>
-          <CustomTimeInput />
-        </div>
       </div>
     </Layout>
   );
