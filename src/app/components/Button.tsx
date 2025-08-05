@@ -10,11 +10,8 @@ type ButtonProps = {
 function Button(props: ButtonProps) {
   const { label, disabled = false, type = '', onClick } = props;
 
-  // const buttonStyles = switch
   let buttonStyles = styles.button;
   if (type === 'small') buttonStyles = styles.buttonSm;
-
-  console.log({ disabled });
 
   return (
     <button
