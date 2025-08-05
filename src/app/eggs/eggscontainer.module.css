@@ -4,6 +4,14 @@
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.eggGrid {
+  width: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;

@@ -26,15 +26,13 @@ export default function EggTimer(props: EggTimerProps) {
 
   return (
     <div className={styles.container}>
-      <div>
-        <EggCard egg={egg} />
-        <Timer
-          milliseconds={egg.time}
-          onComplete={handleComplete}
-          pauseEnabled
-          handleEnd={handleReturn}
-        />
-      </div>
+      <EggCard egg={egg} />
+      <Timer
+        milliseconds={egg.time}
+        onComplete={handleComplete}
+        pauseEnabled
+        handleEnd={handleReturn}
+      />
     </div>
   );
 }
