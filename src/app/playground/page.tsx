@@ -1,7 +1,7 @@
 import Layout from '../layout';
-import CustomTimeInput from './CustomTime';
 
 import styles from './page.module.css';
+import DebouncedInputSearch from './DebouncedInputSearch';
 
 export default function Playground() {
   return (
@@ -11,9 +11,7 @@ export default function Playground() {
           <p className={styles.heading}>Playground</p>
         </div>
         <div className={styles.divider} />
-        <div className={styles.main}>
-          <CustomTimeInput />
-        </div>
+        <DebouncedInputSearch />
       </div>
     </Layout>
   );
